@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Jacques Theron — Breathwork, Shamanic Practice & Mythology</title>
+  <meta name="description" content="Jacques Theron — conscious breathwork practitioner since 1996, shamanic guide, painter of the Classical Mythology Deck and Camino pilgrim. Sessions, retreats and live meet-ups, in person and online.">
+  <link rel="icon" href="https://jacquestheron.com/img/favicon/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav__logo" aria-label="Jacques Theron — home">
+    <img src="../img/jt-logo.svg" alt="Jacques Theron">
+  </a>
+  <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  <nav class="nav__menu" id="navMenu">
+    <a href="#breathwork">Breathwork</a>
+    <a href="#archetypes">Archetypes</a>
+    <a href="#sessions">Sessions</a>
+    <a href="#gatherings">Retreats & Events</a>
+    <a href="#journey">Journey</a>
+    <a href="#contact" class="nav__cta">Connect</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero__bg" style="background-image:url('../img/ceremony-smoke.jpg')"></div>
+  <div class="hero__veil"></div>
+  <canvas id="smoke" class="hero__smoke" aria-hidden="true"></canvas>
+  <div class="hero__content">
+    <img src="../img/jt-logo.svg" alt="Jacques Theron" class="hero__logo reveal">
+    <p class="eyebrow reveal">Breathwork · Shamanic Practice · Mythology</p>
+    <h1 class="reveal">Transformation is a journey of making more space for the&nbsp;Divine.</h1>
+    <p class="hero__lede reveal">Raising our frequency and opening to miracles daily — one breath, one step at a time.</p>
+    <div class="hero__actions reveal">
+      <a href="#breathe" class="btn btn--gold">Breathe with me</a>
+      <a href="#sessions" class="btn btn--ghost">Book a session</a>
+    </div>
+  </div>
+  <a href="#welcome" class="hero__scroll" aria-label="Scroll down"><span></span></a>
+</section>
+
+<!-- ============ WELCOME ============ -->
+<section class="welcome section" id="welcome">
+  <div class="container welcome__grid">
+    <div class="welcome__text">
+      <p class="eyebrow reveal">Welcome</p>
+      <h2 class="reveal">Personal transformation is essential if we are to lead fulfilling lives.</h2>
+      <p class="reveal">Constant and conscious growth keeps us anchored in the present moment, so that old decisions and traumas may be cleared — making it possible to steer ourselves toward the life we desire.</p>
+      <p class="reveal">Transformation can be messy and it takes some effort. At times it may be gut-wrenching in its intensity; yet the process always eventually brings us to a haven of healing, wisdom and inspiration that makes all the work worthwhile.</p>
+      <blockquote class="pull reveal">The path of transformation is walked one step at a time. Showing up regularly brings results. It is — and can be — that simple.</blockquote>
+    </div>
+    <figure class="welcome__photo reveal">
+      <img src="../img/ceremony-standing.jpg" alt="Jacques in ceremony, standing before the painted chakra temple windows" loading="lazy">
+    </figure>
+  </div>
+
+  <div class="container pillars">
+    <article class="pillar reveal">
+      <div class="pillar__icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="15" opacity=".6"/><circle cx="24" cy="24" r="22" opacity=".3"/></svg>
+      </div>
+      <h3>Conscious Breathwork</h3>
+      <p>Simple, safe and very powerful — one of the most effective ways to access relaxation, healing, inspiration and higher purpose.</p>
+      <a href="#breathwork" class="link">Explore breathwork →</a>
+    </article>
+    <article class="pillar reveal">
+      <div class="pillar__icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><path d="M24 4v40M24 14c-6-6-14-4-16 0M24 14c6-6 14-4 16 0M24 30c-6 4-12 10-14 14M24 30c6 4 12 10 14 14"/></svg>
+      </div>
+      <h3>Trance &amp; Transformation</h3>
+      <p>Non-ordinary states of consciousness allow a direct experience of the Divine in our body, being and world.</p>
+      <a href="#gatherings" class="link">Ceremonies &amp; retreats →</a>
+    </article>
+    <article class="pillar reveal">
+      <div class="pillar__icon" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><rect x="12" y="6" width="24" height="36" rx="3"/><path d="M24 14l4 8-4 8-4-8z"/></svg>
+      </div>
+      <h3>Archetypes &amp; Mythology</h3>
+      <p>The gods and goddesses of mythology are psycho-spiritual powerhouses. We can tap into their energy for guidance and growth.</p>
+      <a href="#archetypes" class="link">Draw a card →</a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ BREATH GUIDE (interactive) ============ -->
+<section class="breathe section" id="breathe">
+  <div class="container breathe__grid">
+    <div class="breathe__intro">
+      <p class="eyebrow reveal">Try it now</p>
+      <h2 class="reveal">Take a few conscious breaths</h2>
+      <p class="reveal">Conscious breathwork simply involves changing how you breathe. Choose a rhythm, press begin, and let the circle guide you. Even a minute brings you back into the body.</p>
+      <div class="pattern-picker reveal" role="radiogroup" aria-label="Breathing rhythm">
+        <button class="chip is-active" data-pattern="calm" role="radio" aria-checked="true">Calming <small>4 in · 6 out</small></button>
+        <button class="chip" data-pattern="box" role="radio" aria-checked="false">Grounding <small>4 · 4 · 4 · 4</small></button>
+        <button class="chip" data-pattern="connected" role="radio" aria-checked="false">Connected <small>circular, no pause</small></button>
+      </div>
+      <p class="fineprint reveal">A gentle taste only. Deeper breathwork is best experienced with a trained facilitator — if you feel dizzy, simply return to your natural breath.</p>
+    </div>
+    <div class="breathe__stage reveal">
+      <div class="orb" id="orb">
+        <div class="orb__ring orb__ring--1"></div>
+        <div class="orb__ring orb__ring--2"></div>
+        <div class="orb__core">
+          <span class="orb__label" id="orbLabel">Ready</span>
+          <span class="orb__count" id="orbCount"></span>
+        </div>
+      </div>
+      <div class="breathe__controls">
+        <button class="btn btn--gold" id="breathStart">Begin</button>
+        <button class="sound-toggle" id="soundToggle" aria-pressed="false" title="Singing-bowl chime on each breath">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h4l5-4v12l-5-4H3z"/><path class="sound-toggle__waves" d="M16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11"/></svg>
+          <span id="soundLabel">Bowl off</span>
+        </button>
+        <span class="breathe__cycles" id="breathCycles">0 breaths</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BREATHWORK ============ -->
+<section class="breathwork section" id="breathwork">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">Breathwork</p>
+      <h2 class="reveal">Since the beginning of time, we have sought altered states for healing and connection to the Otherworld.</h2>
+      <p class="reveal">All cultures have found ways to non-ordinary states — meditation, ritual dance, chanting, medicine plants and, of course, conscious breathwork. The breath is a tool for transformation available to everyone, at all times: on spiritual retreat, or while washing the dishes.</p>
+    </div>
+
+    <div class="manifest reveal">
+      <div class="manifest__item"><span class="manifest__num">01</span><h4>Prana is intelligent</h4><p>The life-force carried on your breath knows what to do to viscerally transform your body and inner being. When you practice, your life <em>can't not</em> change.</p></div>
+      <div class="manifest__item"><span class="manifest__num">02</span><h4>Realigns your core truth</h4><p>Breathwork accelerates manifestation because it brings you back to your core truth and anchors it in the body — changing low-frequency beliefs.</p></div>
+      <div class="manifest__item"><span class="manifest__num">03</span><h4>The body is a tuning fork</h4><p>It resonates a particular energy. Change your unconscious beliefs, and you attract like frequencies in the outside world.</p></div>
+    </div>
+
+    <h3 class="sub reveal">Styles Jacques offers</h3>
+    <div class="styles reveal">
+      <div class="styles__tabs" role="tablist" aria-label="Breathwork styles">
+        <button role="tab" aria-selected="true" data-style="0">44 Breaths</button>
+        <button role="tab" aria-selected="false" data-style="1">The Cosmic Tree</button>
+        <button role="tab" aria-selected="false" data-style="2">Intuitive</button>
+        <button role="tab" aria-selected="false" data-style="3">Ecstatic</button>
+        <button role="tab" aria-selected="false" data-style="4">Future Tapping</button>
+      </div>
+      <div class="styles__panel" id="stylePanel" role="tabpanel" aria-live="polite">
+        <div class="styles__art" id="styleArt"></div>
+        <div class="styles__body">
+          <p class="styles__tag" id="styleTag"></p>
+          <h4 id="styleTitle"></h4>
+          <p id="styleText"></p>
+          <a id="styleLink" class="link" href="#" hidden></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="videos">
+      <h3 class="sub reveal">Watch &amp; practice</h3>
+      <div class="videos__grid">
+        <div class="yt reveal" data-id="uwNEwVc65k0" data-title="A Brief Introduction to Conscious Breathwork"></div>
+        <div class="yt reveal" data-id="Gy1TEpTMGig" data-title="44 Breaths — 15 minute breathwork meditation"></div>
+        <div class="yt reveal" data-id="xCPCZFAm_PM" data-title="The Conscious Mind, Deeper Beliefs and Manifestation"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARCHETYPES / ORACLE ============ -->
+<section class="archetypes section" id="archetypes">
+  <div class="stars" aria-hidden="true"></div>
+  <div class="container archetypes__grid">
+    <div class="archetypes__text">
+      <p class="eyebrow reveal">Archetypes &amp; Mythology</p>
+      <h2 class="reveal">The Classical Mythology Deck</h2>
+      <p class="reveal">First published in 2007, and since 2019 re-imagined in oil paint by Jacques himself. New paintings now exist for the 16 Olympians and 9 Primal Gods, with the Titans in progress.</p>
+      <p class="reveal">The front of each card carries visual and symbolic information that stimulates intuition and opens the archetypal realm. The back holds the myth, a divinatory interpretation and an affirmation.</p>
+      <ul class="uses reveal">
+        <li><strong>Self-knowledge.</strong> Discover which archetypes are active in your personality.</li>
+        <li><strong>Your roles in the world.</strong> Swap old “archetypal masks” for more effective ones.</li>
+        <li><strong>Conscious transformation.</strong> Invoke Athena for your career, Aphrodite for love.</li>
+        <li><strong>Insight.</strong> Divination brings guidance and vision for the future.</li>
+      </ul>
+      <div class="archetypes__actions reveal">
+        <a class="btn btn--gold" href="https://www.spiralcircle.com/products/classical-mythology-deck" target="_blank" rel="noopener">Order the deck</a>
+        <a class="btn btn--ghost" href="#contact" data-subject="Free fortnightly Mythology card">Free fortnightly card</a>
+      </div>
+      <p class="fineprint reveal">Sign up for a personally drawn card by email every new and full moon.</p>
+    </div>
+
+    <div class="oracle reveal">
+      <p class="oracle__prompt" id="oraclePrompt">Hold a question in your heart, then draw a card.</p>
+      <div class="deck" id="deck">
+        <button class="card" id="oracleCard" aria-label="Draw a card">
+          <div class="card__inner">
+            <div class="card__back"><div class="card__mandala" id="cardMandala"></div><span>Classical Mythology</span></div>
+            <div class="card__front"><img id="cardImg" src="../img/cards/card-05-hephaistos.jpg" alt=""></div>
+          </div>
+        </button>
+      </div>
+      <div class="reading" id="reading" hidden>
+        <h4 class="reading__name" id="readingName"></h4>
+        <p class="reading__keys" id="readingKeys"></p>
+        <p class="reading__text" id="readingText"></p>
+        <p class="reading__aff" id="readingAff"></p>
+        <button class="btn btn--gold draw-again" id="drawAgain"><span class="draw-again__icon" aria-hidden="true">↻</span> Draw another card</button>
+      </div>
+      <p class="fineprint center">Card paintings by Jacques Theron. The readings here are short samples — the printed deck carries his full interpretations.</p>
+    </div>
+  </div>
+
+  <!-- Deck explorer -->
+  <div class="container explorer">
+    <figure class="explorer__photo reveal">
+      <img src="../img/yt-card-wall.jpg" alt="Jacques teaching beside a mandala of cards on the wall" loading="lazy">
+      <figcaption>Jacques teaching through the archetypes.</figcaption>
+    </figure>
+    <div class="explorer__deck">
+      <p class="eyebrow reveal">The 16 Olympians</p>
+      <h3 class="reveal">Explore the deck</h3>
+      <p class="fineprint reveal">Hover or tap any card to see the painting up close.</p>
+      <div class="fan reveal" id="fan" aria-label="Classical Mythology Deck cards"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SESSIONS ============ -->
+<section class="sessions section" id="sessions">
+  <div class="container">
+    <div class="sessions__intro">
+      <div>
+        <p class="eyebrow reveal">One-to-one</p>
+        <h2 class="reveal">Private consultations</h2>
+        <p class="reveal">Reconnecting you tangibly with the personal and spiritual truth at your core. This unleashes a transformational power that brings lasting change — the brighter light of your soul dispelling fear, anxiety and trauma.</p>
+        <p class="reveal">Sessions are geared not just towards insight, but towards long-lasting shifts in your life.</p>
+      </div>
+      <figure class="sessions__photo reveal">
+        <img src="../img/yt-session-poncho.jpg" alt="Jacques in a poncho with a client after a session" loading="lazy">
+      </figure>
+    </div>
+    <div class="offerings">
+      <article class="offer reveal">
+        <div class="offer__time"><span>90</span>min</div>
+        <h3>Breathwork</h3>
+        <p>An altered state of consciousness that intensifies the therapy experience and brings direct connection to your soul or higher self.</p>
+        <ol class="offer__split"><li><span style="--w:50%"></span>45 min discussion</li><li><span style="--w:50%"></span>45 min breathwork</li></ol>
+        <a href="#contact" class="btn btn--ghost" data-subject="Breathwork session">Request a session</a>
+      </article>
+      <article class="offer offer--feature reveal">
+        <div class="offer__time"><span>90</span>min</div>
+        <h3>Hypnosis</h3>
+        <p>Re-programmes the sub-conscious mind — resolving past trauma, unravelling personality issues and bringing vision for the future.</p>
+        <ol class="offer__split"><li><span style="--w:50%"></span>45 min discussion</li><li><span style="--w:50%"></span>45 min hypnosis</li></ol>
+        <a href="#contact" class="btn btn--gold" data-subject="Hypnosis session">Request a session</a>
+      </article>
+      <article class="offer reveal">
+        <div class="offer__time"><span>55</span>min</div>
+        <h3>Tarot</h3>
+        <p>The cards read the subconscious, revealing the beliefs that shape your experience. Understand your inner workings and you can change the future.</p>
+        <ol class="offer__split"><li><span style="--w:100%"></span>2 main spreads + your questions</li></ol>
+        <a href="#contact" class="btn btn--ghost" data-subject="Tarot reading">Request a reading</a>
+      </article>
+    </div>
+    <p class="center note reveal">All sessions available in person or online via Zoom &amp; Skype.</p>
+
+    <!-- Path finder quiz -->
+    <div class="quiz reveal" id="quiz">
+      <div class="quiz__head">
+        <p class="eyebrow">Not sure where to begin?</p>
+        <h3>Find your path</h3>
+        <div class="quiz__progress" aria-hidden="true"><span id="quizBar"></span></div>
+      </div>
+      <div class="quiz__stage" id="quizStage" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GATHERINGS ============ -->
+<section class="gatherings section" id="gatherings">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">Retreats &amp; Events</p>
+      <h2 class="reveal">Individuals standing together are strong.</h2>
+      <p class="reveal">Since 2020 our world has entered uncharted territory. The maps that used to work may no longer apply — so we chart the new territory together, as co-creators. In person or online, the commitment is to a space of sharing, healing, support and learning from one another.</p>
+    </div>
+
+    <article class="retreat reveal">
+      <div class="retreat__media"><img src="../img/bali.jpg" alt="Balinese temple" loading="lazy"><span class="badge">10-day retreat</span></div>
+      <div class="retreat__body">
+        <p class="eyebrow">Bali Breathwork Retreat</p>
+        <h3>The Magic &amp; Mystery of Rebirth</h3>
+        <p>With Jacques Theron &amp; Patricia Lawson. Experience the sublime beauty and spiritual power of “The Island of a Thousand Temples” — where gods and humans coexist — combined with an intensive transformational breathwork process in holy sites, temples, waterfalls, rivers and mountains.</p>
+        <details class="more">
+          <summary>What's included</summary>
+          <ul>
+            <li>Practices in local temples, blessings from priests, water purification rituals</li>
+            <li>Rebirthing, Water Breathing, Holotropic &amp; Ecstatic breathwork</li>
+            <li>Learning to make “Canang” offerings, and traditional temple dances from the Ramayana</li>
+            <li>A process through the “Nine Sacred Directions” and the Trimurti</li>
+            <li>Shared accommodation at Balitri Villa, Sukawati · two vegetarian Balinese meals a day</li>
+            <li>Transport, temple access, dance performances &amp; snorkelling on the east coast</li>
+            <li>Hours count towards Jacques’ <strong>Breathwork Practitioner certification</strong></li>
+          </ul>
+          <p class="fineprint">From $3,400, excluding airfare. Payment options available — ask about upcoming dates.</p>
+        </details>
+        <div class="retreat__actions">
+          <a href="#contact" class="btn btn--gold" data-subject="Bali Breathwork Retreat">Ask about dates</a>
+          <button class="btn btn--ghost js-play" data-id="1_Xrg8gH51I" data-title="Bali: A Sacred Paradise">▶ Watch the film</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="retreat retreat--camino reveal" id="camino">
+      <div class="retreat__media retreat__media--duo">
+        <img src="../img/yt-camino-walk.jpg" alt="Jacques walking the Camino de Santiago with a pilgrim group" loading="lazy">
+        <img src="../img/yt-camino-group.jpg" alt="Pilgrims resting together outside a stone chapel on the Camino" loading="lazy">
+        <span class="badge">21-day pilgrimage</span>
+      </div>
+      <div class="retreat__body">
+        <p class="eyebrow">Camino de Santiago · Spain</p>
+        <h3>Walk Your Talk: A Pilgrimage of Transformation</h3>
+        <p>For over two decades Jacques has returned to the Camino almost every year, guiding groups along this ancient pilgrimage. On the road, we practice breathwork, rituals and processes that tap into the raw energy of the pilgrimage itself.</p>
+        <blockquote class="pull pull--sm">“The Camino is a true initiation — the true beginning of a new life.”</blockquote>
+        <ul class="camino-steps">
+          <li><span>21</span>days on foot, with the time and space to truly come into ourselves</li>
+          <li><span>20+</span>years guiding pilgrims, alone and in groups</li>
+          <li><span>∞</span>breathwork &amp; ritual woven into each day’s walk</li>
+        </ul>
+        <div class="retreat__actions">
+          <a href="#contact" class="btn btn--gold" data-subject="Camino de Santiago pilgrimage">Join the next Camino</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="events">
+      <article class="event reveal">
+        <div class="event__img"><img src="../img/nature_spirit.jpg" alt="Light breaking through clouds over a fjord" loading="lazy"></div>
+        <div class="event__body">
+          <p class="eyebrow">Free · Live on Zoom</p>
+          <h3>Monday Meet-ups</h3>
+          <p>Open conversations on living spirituality — such as “Towards a Modern Nature Spirituality”: what really makes sense for us as a daily spiritual practice?</p>
+          <p class="tz">Sessions begin at <strong>17:00 UTC</strong> — that's <strong id="localTime">…</strong> where you are.</p>
+          <a class="btn btn--ghost" href="https://us02web.zoom.us/meeting/register/4YOQmslURr6N4Cp93R0_Fg" target="_blank" rel="noopener">Register</a>
+        </div>
+      </article>
+      <article class="event reveal">
+        <div class="event__img"><img src="../img/oak-circle.jpg" alt="A circle gathered beneath a great oak tree" loading="lazy"></div>
+        <div class="event__body">
+          <p class="eyebrow">Year-long journey</p>
+          <h3>One Year Breathwork</h3>
+          <p>A committed, year-long breathwork process. Showing up regularly brings results — practice in community and feel the cumulative shift.</p>
+          <button class="btn btn--ghost js-play" data-id="_mnCyD7233s" data-title="One Year Breathwork — Session 1">▶ Watch session 1</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNEY ============ -->
+<section class="journey section" id="journey">
+  <div class="container journey__grid">
+    <div class="journey__intro">
+      <p class="eyebrow reveal">The Journey</p>
+      <h2 class="reveal">Hello, I am Jacques.</h2>
+      <div class="intro-video reveal">
+        <div class="yt yt--feature" data-id="WKFPEdXXIrk" data-title="Jacques Theron — Introduction" data-thumb="../img/portrait.webp"></div>
+      </div>
+      <p class="reveal">Astrologically a triple Gemini — sun, moon and ascendant — with an ongoing desire to learn, communicate, travel and transform. Many planets in earth signs bring grounding and constancy.</p>
+      <p class="reveal">“My commitment to spiritual growth is long-standing and an integral way of life for me. My passion is to share what I have learned and to facilitate transformation in others.”</p>
+    </div>
+    <ol class="timeline">
+      <li class="reveal"><span class="timeline__year">1971</span><h4>Born in Australia</h4><p>Later living in South Africa and France, and today residing in Brazil.</p></li>
+      <li class="reveal"><span class="timeline__year">Study</span><h4>Architecture, psychology &amp; French literature</h4><p>Degrees in architecture (B.Bdg.A), psychology/languages (B.A) and French Literature at the Université de Nice-Sophia-Antipolis — alongside astrology, Tarot, mythology and hypnosis.</p></li>
+      <li class="reveal"><span class="timeline__year">1996</span><h4>Facilitating breathwork</h4><p>After training as a Rebirther and exploring many styles, he begins guiding groups and individuals — in person and online.</p></li>
+      <li class="reveal"><span class="timeline__year">Path</span><h4>Shamanic studies in Brazil &amp; Peru</h4><p>Ancient medicine paths, earth wisdom and the spiritual mysteries — integral to his own growth and to what he offers others.</p></li>
+      <li class="reveal"><span class="timeline__year">2001</span><h4>The Camino de Santiago</h4><p>A pilgrim at heart: he has walked the Camino in Spain <span class="counter" data-to="15">0</span> times — alone and with the groups he facilitates.</p></li>
+      <li class="reveal"><span class="timeline__year">2007</span><h4>The Classical Mythology Deck</h4><p>First published, then re-worked from 2019 as a series of oil paintings — painting being his centring, spiritual practice.</p></li>
+      <li class="reveal"><span class="timeline__year">Now</span><h4>Retreats, meet-ups &amp; one-to-one work</h4><p>From Bali’s temples to Zoom circles, sharing the tools that make the journey faster.</p></li>
+    </ol>
+  </div>
+  <div class="stats container">
+    <div class="stat reveal"><span class="counter" data-to="30">0</span>+<small>years facilitating breathwork</small></div>
+    <div class="stat reveal"><span class="counter" data-to="15">0</span><small>Camino pilgrimages</small></div>
+    <div class="stat reveal"><span class="counter" data-to="4">0</span><small>countries called home</small></div>
+    <div class="stat reveal"><span class="counter" data-to="25">0</span>+<small>archetypes painted in oil</small></div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery-wrap" aria-label="Moments from the journey">
+  <div class="container gallery-head">
+    <p class="eyebrow reveal">Moments</p>
+    <h2 class="reveal">From the circle</h2>
+  </div>
+  <div class="gallery">
+    <button class="gallery__item g-tall reveal" data-caption="Ceremony beneath the cedar ceiling"><img src="../img/ceremony-smoke.jpg" alt="Jacques in ceremony beneath a cedar ceiling" loading="lazy"></button>
+    <button class="gallery__item g-wide reveal" data-caption="Breathwork circle — community is part of the medicine"><img src="../img/yt-breath-circle.jpg" alt="A breathwork group sitting in a circle on the floor" loading="lazy"></button>
+    <button class="gallery__item reveal" data-caption="Sharing circle under the great oak"><img src="../img/oak-circle.jpg" alt="Sharing circle under the oak" loading="lazy"></button>
+    <button class="gallery__item reveal" data-caption="Joy after the breath"><img src="../img/yt-group-selfie.jpg" alt="A circle of smiling faces looking down at the camera" loading="lazy"></button>
+    <button class="gallery__item g-tall reveal" data-caption="Holding space before the temple windows"><img src="../img/ceremony-standing.jpg" alt="Jacques facing the painted temple windows" loading="lazy"></button>
+    <button class="gallery__item g-wide reveal" data-caption="On the Camino de Santiago"><img src="../img/yt-camino-walk.jpg" alt="Jacques walking the Camino with pilgrims" loading="lazy"></button>
+    <button class="gallery__item reveal" data-caption="Teaching through the archetypes"><img src="../img/yt-card-wall.jpg" alt="Jacques teaching beside a mandala of cards" loading="lazy"></button>
+    <button class="gallery__item reveal" data-caption="Classical Mythology Deck — cover painting by Jacques"><img src="../img/buy_cmd.jpg" alt="Classical Mythology Deck cover painting" loading="lazy"></button>
+  </div>
+</section>
+
+<!-- Photo viewer -->
+<div class="viewer" id="viewer" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="viewer__close" id="viewerClose" aria-label="Close">×</button>
+  <button class="viewer__nav viewer__nav--prev" id="viewerPrev" aria-label="Previous">‹</button>
+  <figure class="viewer__fig"><img id="viewerImg" alt=""><figcaption id="viewerCap"></figcaption></figure>
+  <button class="viewer__nav viewer__nav--next" id="viewerNext" aria-label="Next">›</button>
+</div>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="voices section" id="voices">
+  <div class="container">
+    <p class="eyebrow center reveal">Testimonials</p>
+    <div class="carousel reveal" id="carousel">
+      <figure class="quote is-active">
+        <blockquote>I am blessed to have worked closely with Jacques since 2010, where his work and counsel has brought about the most transformative years of my life… He has been a sound mentor with a calming, graceful, and balanced demeanor that makes you feel comforted and supported. He radiates pure love!</blockquote>
+        <figcaption><img src="../img/celeste.png" alt="">Celeste</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote>I am incredibly grateful to Jacques for his masterful guidance in breathwork. It helped me learn so much about myself and start a breathwork journey of my own!</blockquote>
+        <figcaption><img src="../img/sergey2.jpg" alt="">Sergey</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote>The first 6 times I tried doing breathwork, I really struggled getting past my self judgement and out of my mind. Thanks to Jacques' coaching I was able to push past my blocks and reach spaces I never dreamed of. Now I look forward to every breathwork session.</blockquote>
+        <figcaption><img src="../img/reviewer.jpeg" alt="">Jeff</figcaption>
+      </figure>
+      <div class="carousel__dots" role="tablist" aria-label="Choose testimonial"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact section" id="contact">
+  <div class="container contact__grid">
+    <div>
+      <p class="eyebrow reveal">Connect</p>
+      <h2 class="reveal">Begin where you are.</h2>
+      <p class="reveal">Whether you’re curious about a first breathwork session, a retreat, or a reading — send a message and Jacques will be in touch.</p>
+      <ul class="contact__list reveal">
+        <li><a href="mailto:jacquestheron265@gmail.com">jacquestheron265@gmail.com</a></li>
+        <li>Retreats: <a href="mailto:mythicaljourneytours@gmail.com">mythicaljourneytours@gmail.com</a></li>
+      </ul>
+      <div class="socials reveal">
+        <a href="https://www.youtube.com/channel/UCOVs9pUplG1sPsw51l1ncZA" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15V9l5.8 3z"/></svg></a>
+        <a href="https://instagram.com/jacquestheron265/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 2.2c-2.7 0-3 0-4 .1-4 .2-5.6 1.8-5.7 5.7-.1 1-.1 1.3-.1 4s0 3 .1 4c.2 3.9 1.8 5.5 5.7 5.7 1 .1 1.3.1 4 .1s3 0 4-.1c3.9-.2 5.5-1.8 5.7-5.7.1-1 .1-1.3.1-4s0-3-.1-4c-.2-3.9-1.8-5.5-5.7-5.7-1-.1-1.3-.1-4-.1z"/></svg></a>
+        <a href="https://www.facebook.com/jacques.theron.353" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6.2c0-.8.2-1.2 1.4-1.2H17V2h-2.6C11.4 2 10.3 3.4 10.3 6v2H8v3h2.3v11H14V11h2.7l.3-3z"/></svg></a>
+      </div>
+    </div>
+    <form class="form reveal" id="contactForm">
+      <label>Full name<input name="name" required autocomplete="name"></label>
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <label>I’m interested in
+        <select name="subject" id="subjectSelect">
+          <option>General inquiry</option>
+          <option>Breathwork session</option>
+          <option>Hypnosis session</option>
+          <option>Tarot reading</option>
+          <option>Bali Breathwork Retreat</option>
+          <option>Camino de Santiago pilgrimage</option>
+          <option>Monday Meet-up</option>
+          <option>Free fortnightly Mythology card</option>
+          <option>Newsletter</option>
+        </select>
+      </label>
+      <label>Message<textarea name="message" rows="5"></textarea></label>
+      <button class="btn btn--gold" type="submit">Send message</button>
+      <p class="fineprint" id="formNote">Opens your email app with your message ready to send.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <img src="../img/jt-logo.svg" alt="Jacques Theron" class="footer__logo">
+  <p>Walk in love, light and truth.</p>
+  <p class="fineprint">© <span id="year"></span> Jacques Theron</p>
+</footer>
+
+<!-- Video lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close video">×</button>
+  <div class="lightbox__frame" id="lightboxFrame"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
