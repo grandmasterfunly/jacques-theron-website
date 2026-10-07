@@ -5,16 +5,24 @@
 
   /* ---------- Nav ---------- */
   const nav = $('#nav'), toggle = $('#navToggle'), menu = $('#navMenu');
-  const onScroll = () => nav.classList.toggle('is-scrolled', scrollY > 40);
-  addEventListener('scroll', onScroll, { passive: true }); onScroll();
-  toggle.addEventListener('click', () => {
-    const open = menu.classList.toggle('is-open');
+  const setMenuOpen = open => {
+    menu.classList.toggle('is-open', open);
+    nav.classList.toggle('is-menu-open', open);
     toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     document.body.style.overflow = open ? 'hidden' : '';
+  };
+  /* Header stays fixed always — only toggle solid bar styling, never hide */
+  const onScroll = () => {
+    if (menu.classList.contains('is-open')) return;
+    nav.classList.toggle('is-scrolled', scrollY > 40);
+  };
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  toggle.addEventListener('click', () => setMenuOpen(!menu.classList.contains('is-open')));
+  $$('a', menu).forEach(a => a.addEventListener('click', () => setMenuOpen(false)));
+  addEventListener('keydown', e => {
+    if (e.key === 'Escape' && menu.classList.contains('is-open')) setMenuOpen(false);
   });
-  $$('a', menu).forEach(a => a.addEventListener('click', () => {
-    menu.classList.remove('is-open'); toggle.setAttribute('aria-expanded', false); document.body.style.overflow = '';
-  }));
   const sectionLinks = $$('a[href^="#"]', menu);
   const spy = new IntersectionObserver(entries => entries.forEach(e => {
     if (!e.isIntersecting) return;

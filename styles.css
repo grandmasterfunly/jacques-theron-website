@@ -62,20 +62,42 @@ p { margin: 0 0 1.1em; }
 .link--btn { background: none; border: 0; font: inherit; cursor: pointer; padding: 0; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
-/* ===== Nav ===== */
+/* ===== Nav =====
+   Always fixed — never hide-on-scroll / translateY.
+   No backdrop-filter on .nav: it creates a containing block for position:fixed
+   children and shrinks the mobile menu to the header height (~60px), so links
+   float over page content with no full-screen overlay. */
 .nav {
   position: fixed; inset: 0 0 auto; z-index: 50;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 18px clamp(16px, 4vw, 48px); transition: background .4s, padding .4s, backdrop-filter .4s;
+  padding: 18px clamp(16px, 4vw, 48px);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  /* Solid bg only — no backdrop-filter (avoids fixed-descendant bug + scroll flash) */
+  transition: background .25s var(--ease), border-color .25s var(--ease), padding .25s var(--ease);
+  transform: none; /* never translate/hide */
 }
-.nav.is-scrolled { background: rgba(18,12,8,.82); backdrop-filter: blur(14px); padding-block: 10px; border-bottom: 1px solid var(--line); }
-.nav__logo img { height: 46px; width: auto; transition: height .4s; }
+.nav.is-scrolled {
+  background: rgba(18, 12, 8, .94);
+  padding-block: 10px;
+  border-bottom-color: var(--line);
+}
+.nav.is-menu-open {
+  background: transparent;
+  border-bottom-color: transparent;
+}
+.nav__logo { position: relative; z-index: 60; }
+.nav__logo img { height: 46px; width: auto; transition: height .25s var(--ease); }
 .nav.is-scrolled .nav__logo img { height: 38px; }
+.nav.is-menu-open .nav__logo img { height: 46px; }
 .nav__menu { display: flex; gap: clamp(14px, 2.2vw, 34px); align-items: center; }
 .nav__menu a { text-decoration: none; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; opacity: .85; transition: opacity .3s, color .3s; }
 .nav__menu a:hover, .nav__menu a.is-current { opacity: 1; color: var(--gold); }
 .nav__cta { border: 1px solid var(--gold); padding: .6em 1.3em; border-radius: 999px; }
-.nav__toggle { display: none; background: none; border: 0; width: 40px; height: 40px; cursor: pointer; position: relative; z-index: 2; }
+.nav__toggle {
+  display: none; background: none; border: 0; width: 40px; height: 40px; cursor: pointer;
+  position: relative; z-index: 60;
+}
 .nav__toggle span { position: absolute; left: 8px; right: 8px; height: 1.5px; background: var(--cream); transition: transform .35s var(--ease); }
 .nav__toggle span:first-child { top: 15px; } .nav__toggle span:last-child { top: 24px; }
 .nav__toggle[aria-expanded="true"] span:first-child { transform: translateY(4.5px) rotate(45deg); }
@@ -84,11 +106,40 @@ p { margin: 0 0 1.1em; }
 @media (max-width: 880px) {
   .nav__toggle { display: block; }
   .nav__menu {
-    position: fixed; inset: 0; flex-direction: column; justify-content: center; gap: 28px;
-    background: rgba(18,12,8,.97); opacity: 0; pointer-events: none; transition: opacity .4s;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    margin: 0;
+    padding: 88px 24px 48px;
+    /* Solid night overlay — covers hero/content completely */
+    background: var(--night);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .35s var(--ease), visibility .35s var(--ease);
+    z-index: 55;
   }
-  .nav__menu.is-open { opacity: 1; pointer-events: auto; }
-  .nav__menu a { font-size: 1rem; }
+  .nav__menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .nav__menu a {
+    font-size: 1.05rem;
+    letter-spacing: .18em;
+    padding: .35em .5em;
+  }
+  .nav__menu .nav__cta {
+    margin-top: .4rem;
+    padding: .75em 1.6em;
+  }
 }
 
 /* ===== Hero ===== */
